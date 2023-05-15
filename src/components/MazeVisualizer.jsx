@@ -31,8 +31,7 @@ export default class MazeVisualizer extends Component {
 
         return (
             <div>
-                foo abr
-                <button onClick={() => this.tableMount()}>Mount</button>
+                <button onClick={() => this.tableMount()}>Display Grid</button>
                 <div className="grid">
                     {squares.map((row, rowIdx) => {
                         return (
@@ -43,7 +42,7 @@ export default class MazeVisualizer extends Component {
                             </div>
                         );
                     })}
-            </div>
+                </div>
             </div>);
     }
 }
