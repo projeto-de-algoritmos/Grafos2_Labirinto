@@ -11,9 +11,10 @@ const FINISH_NODE_COL = 35;
 
 export default class MazeVisualizer extends Component {
     constructor(props) {
-        super(props);
+        super();
         this.state = {
             grid: [],
+            mouseIsPressed: false,
         };
     }
 
@@ -41,6 +42,24 @@ export default class MazeVisualizer extends Component {
     }
 
  
+
+    handleMouseEnter(row,col){
+      if (!this.state.mouseIsPressed) return;
+      console.log(row,col);
+      const newGrid = getNewGridWithWallToggled(this.state.grid, row, col);
+      this.setState({grid: newGrid});
+    }
+
+    handleMouseDown(row,col){
+      const newGrid = getNewGridWithWallToggled(this.state.grid, row, col);
+      this.setState({grid: newGrid, mouseIsPressed: true});
+    }
+
+    handleMouseUp(){
+      this.setState({mouseIsPressed: false});
+    }
+
+    
 
     animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder) {
         for (let i = 0; i < visitedNodesInOrder.length; i++) {
@@ -80,7 +99,7 @@ export default class MazeVisualizer extends Component {
 
 
     render() {
-        const {grid} = this.state;
+        const {grid,mouseIsPressed} = this.state;
 
         return (
             <div>
@@ -97,11 +116,15 @@ export default class MazeVisualizer extends Component {
                                         <Square
                                             key={squareIdx}
                                             col={col}
-
+                                            mouseIsPressed={mouseIsPressed}
                                             isFinish={isFinish}
                                             isStart={isStart}
                                             isWall={isWall}
                                             row={row}
+                                            onMouseDown={(row,col) => this.handleMouseDown(row,col)}
+                                            onMouseUp={() => this.handleMouseUp()}
+                                            
+                                            onMouseEnter={(row,col) => this.handleMouseEnter(row,col)}
                                         ></Square>
                                     );
                                 })}
@@ -138,13 +161,13 @@ const getInitialGrid = () => {
     };
   };
   
-  // const getNewGridWithWallToggled = (grid, row, col) => {
-  //   const newGrid = grid.slice();
-  //   const node = newGrid[row][col];
-  //   const newNode = {
-  //     ...node,
-  //     isWall: !node.isWall,
-  //   };
-  //   newGrid[row][col] = newNode;
-  //   return newGrid;
-  // };
+  const getNewGridWithWallToggled = (grid, row, col) => {
+    const newGrid = grid.slice();
+    const square = newGrid[row][col];
+    const newNode = {
+      ...square,
+      isWall: !square.isWall,
+    };
+    newGrid[row][col] = newNode;
+    return newGrid;
+  };

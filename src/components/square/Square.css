@@ -17,3 +17,12 @@
     outline: 1px solid black;
 }
 
+.square-wall{
+    background-color: black;
+    outline: 1px solid black;
+}
+
+.square-shortest-path{
+    background-color: blue;
+    outline: 1px solid black;
+}

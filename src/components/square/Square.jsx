@@ -5,16 +5,17 @@ import "./Square.css";
 export default class Square extends Component{
 
     render(){
-        const {row, col,wall} = this.props;
+        const {row, col,isWall,onMouseEnter,onMouseDown,onMouseUp} = this.props;
 
         const {isStart, isFinish,isVisited} = this.props;
         const extraClassName = isFinish 
             ? "square-finish" 
             : isStart 
             ? "square-start"
-            : isVisited
-            ? "square-visited" 
+            : isWall
+            ? "square-wall" 
             : "" ;
-        return <div id={`square-${row}-${col}`} className={`square ${extraClassName}`}></div>;
+        return <div id={`square-${row}-${col}`} className={`square ${extraClassName}`} onMouseEnter={() => onMouseEnter(row,col)}
+                    onMouseDown={() => onMouseDown(row,col)} onMouseUp={() => onMouseUp(row,col)}></div>;
     }
 }
