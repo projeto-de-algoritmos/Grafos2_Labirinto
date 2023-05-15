@@ -66,14 +66,14 @@ export default class MazeVisualizer extends Component {
           if (i === visitedNodesInOrder.length - 1) {
             setTimeout(() => {
               this.animateShortestPath(nodesInShortestPathOrder);
-            }, 10 * i);
+            }, 2 * i);
             return;
           }
           setTimeout(() => {
             const node = visitedNodesInOrder[i];
             document.getElementById(`square-${node.row}-${node.col}`).className =
               'square square-visited';
-          }, 10 * i);
+          }, 2 * i);
         }
       }
       
@@ -83,7 +83,7 @@ export default class MazeVisualizer extends Component {
             const node = nodesInShortestPathOrder[i];
             document.getElementById(`square-${node.row}-${node.col}`).className =
               'square square-shortest-path';
-          }, 50 * i);
+          }, 5 * i);
         }
       }
     
@@ -123,7 +123,7 @@ export default class MazeVisualizer extends Component {
                                             row={row}
                                             onMouseDown={(row,col) => this.handleMouseDown(row,col)}
                                             onMouseUp={() => this.handleMouseUp()}
-                                            
+
                                             onMouseEnter={(row,col) => this.handleMouseEnter(row,col)}
                                         ></Square>
                                     );
