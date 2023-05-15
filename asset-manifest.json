@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Grafos2_Labirinto/static/css/main.9d4bb5a5.css",
+    "main.js": "/Grafos2_Labirinto/static/js/main.4dc454e5.js",
+    "static/js/787.111d4155.chunk.js": "/Grafos2_Labirinto/static/js/787.111d4155.chunk.js",
+    "static/media/logo.svg": "/Grafos2_Labirinto/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Grafos2_Labirinto/index.html",
+    "main.9d4bb5a5.css.map": "/Grafos2_Labirinto/static/css/main.9d4bb5a5.css.map",
+    "main.4dc454e5.js.map": "/Grafos2_Labirinto/static/js/main.4dc454e5.js.map",
+    "787.111d4155.chunk.js.map": "/Grafos2_Labirinto/static/js/787.111d4155.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d4bb5a5.css",
+    "static/js/main.4dc454e5.js"
+  ]
+}
