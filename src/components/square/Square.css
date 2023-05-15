@@ -12,4 +12,8 @@
     background-color: red;
     outline: 1px solid black;
 }
+.square-visited{
+    background-color: yellow;
+    outline: 1px solid black;
+}
 
