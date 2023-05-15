@@ -1,6 +1,9 @@
 import React, {Component} from "react";
 import Square from "./square/Square";
+
+
 import {dijkstra, getNodesInShortestPathOrder} from "../algorith/dijkstra";
+
 
 import './MazeVisualizer.css';
 
@@ -8,6 +11,7 @@ const START_NODE_ROW = 10;
 const START_NODE_COL = 5;
 const FINISH_NODE_ROW = 10;
 const FINISH_NODE_COL = 35;
+
 
 export default class MazeVisualizer extends Component {
     constructor(props) {
@@ -17,6 +21,8 @@ export default class MazeVisualizer extends Component {
             mouseIsPressed: false,
         };
     }
+    
+
 
     // tableMount() {
     //     const squares = []; // 2d array
@@ -83,7 +89,7 @@ export default class MazeVisualizer extends Component {
             const node = nodesInShortestPathOrder[i];
             document.getElementById(`square-${node.row}-${node.col}`).className =
               'square square-shortest-path';
-          }, 5 * i);
+          }, 20 * i);
         }
       }
     
@@ -103,9 +109,12 @@ export default class MazeVisualizer extends Component {
 
         return (
             <div>
-                <button onClick={() => this.visualizeDijkstra()}>
-                    Visualize Dijkstra's Algorithm
-                </button>
+                <div className="styled-button" onClick={() => this.visualizeDijkstra()}>
+                    Dijkstra
+                  {/* <button onClick={() => this.visualizeDijkstra()}>
+                      Visualize Dijkstra's Algorithm
+                  </button> */}
+                </div>
                 <div className="grid">
                     {grid.map((row, rowIdx) => {
                         return (

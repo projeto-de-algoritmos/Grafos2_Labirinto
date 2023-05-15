@@ -13,7 +13,13 @@
     outline: 1px solid black;
 }
 .square-visited{
-    background-color: yellow;
+    animation-name: visitedAnimation;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     outline: 1px solid black;
 }
 
@@ -25,4 +31,30 @@
 .square-shortest-path{
     background-color: blue;
     outline: 1px solid black;
+}
+
+
+@keyframes visitedAnimation{
+    0%{
+        transform: scale(0.3);
+        background-color: rgba(240, 240, 214, 1);
+        border-radius: 100%;
+    }
+
+    50%{
+        background-color: rgba(255, 249, 222, 1);
+    }
+
+    75%{
+        transform: scale(1.2);
+        background-color: rgb(255, 255, 204, 1);
+    }
+
+    100%{
+        transform: scale(1);
+        background-color: rgba(255, 255, 126, 1);
+    }
+
+
+
 }
