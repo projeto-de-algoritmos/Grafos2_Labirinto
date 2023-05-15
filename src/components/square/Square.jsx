@@ -9,6 +9,8 @@ export default class Square extends Component{
     }
 
     render(){
-        return <div className="square"></div>;
+        const {isStart, isFinish} = this.props;
+        const extraClassName = isFinish ? "square-finish" : isStart ? "square-start" : "";
+        return <div className={`square ${extraClassName}`}></div>;
     }
 }

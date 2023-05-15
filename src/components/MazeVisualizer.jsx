@@ -13,10 +13,16 @@ export default class MazeVisualizer extends Component {
 
     tableMount() {
         const squares = []; // 2d array
-        for (let row = 0; row < 15; row++) {
+        for (let row = 0; row < 20; row++) {
             const currentRow = [];
             for (let col = 0; col < 40; col++) {
-                currentRow.push([]);
+                const currentSquare = {
+                    col,
+                    row,
+                    isStart: row === 10 && col === 5,
+                    isFinish: row === 10 && col === 35,
+                };
+                currentRow.push(currentSquare);
             }
             squares.push(currentRow);
         }
@@ -36,9 +42,18 @@ export default class MazeVisualizer extends Component {
                     {squares.map((row, rowIdx) => {
                         return (
                             <div key={rowIdx}>
-                                {row.map((square, squareIdx) => (
-                                    <Square key={squareIdx} />
-                                ))}
+                                {row.map((square, squareIdx) => {
+                                    const {row, col, isFinish, isStart} = square;
+                                    return (
+                                        <Square
+                                            key={squareIdx}
+                                            col={col}
+                                            row={row}
+                                            isFinish={isFinish}
+                                            isStart={isStart}
+                                        ></Square>
+                                    );
+                                })}
                             </div>
                         );
                     })}

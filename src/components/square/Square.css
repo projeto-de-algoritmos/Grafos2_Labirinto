@@ -4,4 +4,12 @@
     outline: 1px solid grey;
     display: inline-block;
 }
+.square-start{
+    background-color: green;
+    outline: 1px solid black;
+}
+.square-finish{
+    background-color: red;
+    outline: 1px solid black;
+}
 
