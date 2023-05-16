@@ -11,22 +11,21 @@
 | 18/0078640 |  Yuri Alves Bacarias|
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Este projeto se trata de um construtor de labirinto, onde o usuário cria paredes para dificultar o programa de atingor o ponto de chegada. Para isso foi utilizado o algoritmo de de Dijkstra, que calcula o caminho de custo mínimo entre vértices de um grafo. Escolhido um vértice como raiz da busca, este algoritmo calcula o custo mínimo deste vértice para todos os demais vértices do grafo. Ele é bastante simples e com um bom nível de performance.  
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: JavaScript<br>
+**Framework**: ReactJS<br>
+
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
-
+Para rodar o projeto basta clonar o repositório e depois escrever em seu terminar o seguinte comando:
+```bash
+npm start
+```
+Para fins de teste basta acessar o projeto deployado no seguinte link:
+https://projeto-de-algoritmos.github.io/Grafos2_Labirinto/
 
