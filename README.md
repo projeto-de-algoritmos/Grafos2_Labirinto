@@ -14,7 +14,7 @@
 Este projeto se trata de um construtor de labirinto, onde o usuário cria paredes para dificultar o programa de atingor o ponto de chegada. Para isso foi utilizado o algoritmo de de Dijkstra, que calcula o caminho de custo mínimo entre vértices de um grafo. Escolhido um vértice como raiz da busca, este algoritmo calcula o custo mínimo deste vértice para todos os demais vértices do grafo. Ele é bastante simples e com um bom nível de performance.  
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
