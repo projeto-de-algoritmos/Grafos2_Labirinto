@@ -16,6 +16,8 @@ Este projeto se trata de um construtor de labirinto, onde o usuário cria parede
 ## Screenshots
 ![image](https://github.com/projeto-de-algoritmos/Grafos2_Labirinto/assets/48924092/7511af7e-233d-4d27-8444-5c3ef62d0e80)
 
+link do video https://unbbr-my.sharepoint.com/:v:/g/personal/180078640_aluno_unb_br/EQEHbObuasZJkkuIOpIqmccBBlygnVRag5uIP4u1RspyOw?e=CZen5o
+
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
